@@ -1,0 +1,14 @@
+<mat-card class="classroom-card">
+  <mat-card-header>
+    <mat-card-title>About Classroom</mat-card-title>
+  </mat-card-header>
+</mat-card>
+<h3 mat-subheader>In Class</h3>
+<mat-list class="participants-list">
+  <mat-list-item *ngFor="let participant of participants; last as last">
+    <mat-icon mat-list-icon>perm_identity</mat-icon>
+     <h2 mat-line class="participant-name">{{participant.name}}</h2>
+     <p mat-line class="demo-2"> {{participant.status}} </p>
+     <mat-divider></mat-divider>
+  </mat-list-item>
+</mat-list>

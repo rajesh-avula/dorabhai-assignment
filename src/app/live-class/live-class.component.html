@@ -1,0 +1,39 @@
+<mat-card class="card-class" *ngFor="let class of classes">
+  <div>
+    <img src="../../assets/db.jpg" alt="" class="img-db">
+  </div>
+  <div class="card-class-content">
+    <mat-card-title> {{class.title}}</mat-card-title>
+    <div>{{class.startedDate | date:'dd-mm-yyyy h:mm a'}}</div>
+    <mat-divider></mat-divider>
+    <mat-card-content>
+      <div style="margin-top: 2%;margin-bottom: 5%;">
+        <span>
+          <span>
+            Topic
+          </span>
+          <div style="font-weight: 600;">
+            {{class.topic}}
+          </div>
+        </span>
+        <span style="float: right; margin-top: -5%"><span>
+          <mat-icon>
+            play_arrow
+          </mat-icon>
+          </span>Online</span>
+      </div>
+      <div>
+        <span>Started At <span style="font-weight: 600;">{{class.startedDate | date:'dd-mm-yyyy h:mm a'}}</span> </span>
+        <span style="float: right;"><button mat-raised-button color="warn" class="btn-enter-class">Enter</button>
+        </span>
+      </div>
+    </mat-card-content>
+    <mat-divider></mat-divider>
+    <div class="card-actions">
+      <span *ngFor="let action of actions" class="card-action">
+        <mat-icon>{{action.icon}}</mat-icon>
+        <span>{{action.title}}</span>
+      </span>
+    </div>
+  </div>
+</mat-card>

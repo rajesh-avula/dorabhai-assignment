@@ -1,0 +1,32 @@
+<div class="main-section">
+  <div class="classroom-section">
+    <img src="../../assets/db.jpg" alt="dorabhai" class="img-dorabhai">
+    <h1 class="title">{{classroom.title}}</h1>
+    <h3 class="subjects">{{classroom.subjects}}</h3>
+    <h5 class="organiser">by {{classroom.organiser}}</h5>
+    <div class="classroom-counts">
+      <span>
+        <div class="count">{{classroom.materials}}</div>
+        <div>Materials</div>
+      </span>
+      <span>
+        <div class="count">{{classroom.posts}}</div>
+        <div>Posts</div>
+      </span>
+      <span>
+        <div class="count">{{classroom.members}}</div>
+        <div>Members</div>
+      </span>
+    </div>
+    <button mat-raised-button color="warn" class="btn-join-class">Join Class</button>
+    <mat-icon class="img-share">share</mat-icon>
+  </div>
+  <div class="classroom-options">
+    <mat-nav-list>
+      <a mat-list-item *ngFor="let section of sections" routerLink="/{{section.path}}" routerLinkActive="active">
+        <mat-icon>{{section.icon}}</mat-icon>
+        {{ section.title }}
+      </a>
+   </mat-nav-list>
+  </div>
+</div>
